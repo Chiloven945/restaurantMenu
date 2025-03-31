@@ -29,6 +29,3 @@ jobs:
       with:
         name: javafx-app-jar
         path: target/*.jar
-
-    - name: Update dependency graph (optional)
-      uses: advanced-security/maven-dependency-submission-action@v3
