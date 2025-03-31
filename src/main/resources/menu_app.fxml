@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1"
+            fx:controller="chiloven.menu.MenuAppController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem onAction="#handleExport" text="Export"/>
+            </Menu>
+            <Menu text="Settings">
+                <MenuItem onAction="#handleSettings" text="Preferences"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem onAction="#handleAbout" text="About"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+        <ScrollPane fitToWidth="true">
+            <VBox fx:id="menuContainer" spacing="15" style="-fx-background-color: #f9f9f9;">
+                <padding>
+                    <Insets bottom="15" left="15" right="15" top="15"/>
+                </padding>
+            </VBox>
+        </ScrollPane>
+    </left>
+    <center>
+        <VBox prefHeight="270.0" prefWidth="423.0" spacing="10" style="-fx-background-color: #ffffff;">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15"/>
+            </padding>
+            <TextArea fx:id="orderHistoryArea" editable="false"
+                      promptText="Your order history will be displayed at here..."
+                      style="-fx-font-size: 14px; -fx-control-inner-background: #fdfdfd; -fx-border-color: #cccccc;"
+                      wrapText="true" VBox.vgrow="ALWAYS"/>
+            <VBox>
+                <Button onAction="#placeOrder"
+                        style="-fx-background-color: #3296FA; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 10 20 10 20;"
+                        text="Place Order"/>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

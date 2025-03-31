@@ -1,0 +1,234 @@
+[
+  {
+    "category": "Pre-Meal Bread",
+    "items": [
+      {
+        "name": "Garlic Baguette",
+        "description": "Toasted baguette with garlic and herbs.",
+        "price": "$5",
+        "image": "images/baguette.png"
+      },
+      {
+        "name": "Herb Butter Soft Rolls",
+        "description": "Soft rolls with a buttery herb crust.",
+        "price": "$6",
+        "image": "images/rolls.png"
+      }
+    ]
+  },
+  {
+    "category": "Steak (Choose 8 out of 9)",
+    "items": [
+      {
+        "name": "Pan-Seared Filet Mignon",
+        "description": "Premium cut cooked to perfection.",
+        "price": "$58",
+        "image": "images/filet_mignon.png"
+      },
+      {
+        "name": "Black Pepper Ribeye Steak",
+        "description": "Juicy ribeye with black pepper.",
+        "price": "$52",
+        "image": "images/ribeye.png"
+      },
+      {
+        "name": "Tomahawk Steak",
+        "description": "Massive bone-in steak grilled over fire.",
+        "price": "$68",
+        "image": "images/tomahawk.png"
+      },
+      {
+        "name": "Australian Sirloin Steak",
+        "description": "Imported sirloin with bold flavor.",
+        "price": "$48",
+        "image": "images/sirloin.png"
+      },
+      {
+        "name": "Garlic Butter T-Bone Steak",
+        "description": "Classic T-Bone steak with garlic butter.",
+        "price": "$55",
+        "image": "images/tbone.png"
+      },
+      {
+        "name": "Slow-Roasted Short Ribs",
+        "description": "Tender short ribs, slow roasted.",
+        "price": "$53",
+        "image": "images/short_ribs.png"
+      },
+      {
+        "name": "Charcoal-Grilled Beef Ribs",
+        "description": "Smoky beef ribs grilled on charcoal.",
+        "price": "$50",
+        "image": "images/beef_ribs.png"
+      },
+      {
+        "name": "Smoked Angus Steak",
+        "description": "Smoked angus beef with deep flavor.",
+        "price": "$60",
+        "image": "images/angus.png"
+      },
+      {
+        "name": "Pan-Seared Tender Shoulder Steak",
+        "description": "Affordable and flavorful shoulder cut.",
+        "price": "$45",
+        "image": "images/shoulder.png"
+      }
+    ]
+  },
+  {
+    "category": "Pasta (Choose 2 out of 4)",
+    "items": [
+      {
+        "name": "Creamy Mushroom Bacon Pasta",
+        "description": "Rich cream sauce with bacon and mushrooms.",
+        "price": "$22",
+        "image": "images/mushroom_pasta.png"
+      },
+      {
+        "name": "Classic Bolognese Pasta",
+        "description": "Hearty meat sauce over spaghetti.",
+        "price": "$20",
+        "image": "images/bolognese.png"
+      },
+      {
+        "name": "Pesto Chicken Pasta",
+        "description": "Grilled chicken with fresh basil pesto.",
+        "price": "$23",
+        "image": "images/pesto_pasta.png"
+      },
+      {
+        "name": "Seafood Tomato Pasta",
+        "description": "Shrimp and squid in tomato sauce.",
+        "price": "$25",
+        "image": "images/seafood_pasta.png"
+      }
+    ]
+  },
+  {
+    "category": "Pizza (Choose 2 out of 5)",
+    "items": [
+      {
+        "name": "Italian Margherita Pizza",
+        "description": "Fresh mozzarella, tomatoes, and basil.",
+        "price": "$18",
+        "image": "images/margherita.png"
+      },
+      {
+        "name": "Black Truffle Mushroom Pizza",
+        "description": "Earthy mushrooms with black truffle oil.",
+        "price": "$24",
+        "image": "images/truffle_pizza.png"
+      },
+      {
+        "name": "Four Seasons Pizza",
+        "description": "A quadrant of seasonal toppings.",
+        "price": "$22",
+        "image": "images/four_seasons.png"
+      },
+      {
+        "name": "Hawaiian Pizza",
+        "description": "Ham and pineapple over cheese.",
+        "price": "$19",
+        "image": "images/hawaiian.png"
+      },
+      {
+        "name": "Italian Sausage Pizza",
+        "description": "Sausage, peppers, and onion combo.",
+        "price": "$21",
+        "image": "images/sausage_pizza.png"
+      }
+    ]
+  },
+  {
+    "category": "Salad (Choose 2 out of 3)",
+    "items": [
+      {
+        "name": "Caesar Salad",
+        "description": "Romaine, parmesan, croutons.",
+        "price": "$12",
+        "image": "images/caesar.png"
+      },
+      {
+        "name": "Avocado Shrimp Salad",
+        "description": "Fresh shrimp with avocado chunks.",
+        "price": "$15",
+        "image": "images/shrimp_salad.png"
+      },
+      {
+        "name": "Smoked Salmon Salad",
+        "description": "Delicate smoked salmon over greens.",
+        "price": "$16",
+        "image": "images/salmon_salad.png"
+      }
+    ]
+  },
+  {
+    "category": "Appetizers (Choose 3 out of 5)",
+    "items": [
+      {
+        "name": "Crispy Fried Calamari Rings",
+        "description": "Golden fried squid with dipping sauce.",
+        "price": "$14",
+        "image": "images/calamari.png"
+      },
+      {
+        "name": "Crunchy Potato Wedges",
+        "description": "Wedges with garlic and herbs.",
+        "price": "$9",
+        "image": "images/wedges.png"
+      },
+      {
+        "name": "Fried Cheese Sticks",
+        "description": "Melty mozzarella in a crunchy shell.",
+        "price": "$11",
+        "image": "images/cheese_sticks.png"
+      },
+      {
+        "name": "Crispy Chicken Wings",
+        "description": "Served with spicy buffalo sauce.",
+        "price": "$13",
+        "image": "images/wings.png"
+      },
+      {
+        "name": "Garlic Bread Sticks",
+        "description": "Soft sticks brushed with garlic butter.",
+        "price": "$8",
+        "image": "images/bread_sticks.png"
+      }
+    ]
+  },
+  {
+    "category": "Soup (Choose 2 out of 3)",
+    "items": [
+      {
+        "name": "Creamy Mushroom Soup",
+        "description": "Smooth cream base with mushrooms.",
+        "price": "$10",
+        "image": "images/mushroom_soup.png"
+      },
+      {
+        "name": "Pumpkin Cream Soup",
+        "description": "Velvety pumpkin puree and cream.",
+        "price": "$9",
+        "image": "images/pumpkin_soup.png"
+      },
+      {
+        "name": "French Onion Soup",
+        "description": "Topped with bread and melted cheese.",
+        "price": "$11",
+        "image": "images/onion_soup.png"
+      }
+    ]
+  },
+  {
+    "category": "Dessert",
+    "items": [
+      {
+        "name": "Tiramisu (8 servings)",
+        "description": "Classic Italian layered dessert.",
+        "price": "$32",
+        "image": "images/tiramisu.png"
+      }
+    ]
+  }
+]
