@@ -24,5 +24,8 @@
 
     <Pane HBox.hgrow="ALWAYS" />
 
-    <Spinner fx:id="quantitySpinner" prefHeight="32.0" prefWidth="80" />
+    <VBox alignment="CENTER_RIGHT" spacing="3">
+        <Spinner fx:id="quantitySpinner" prefHeight="32.0" prefWidth="80" />
+        <Label fx:id="remainingLabel" style="-fx-font-size: 11px; -fx-text-fill: #888888;" text="Remaining: " />
+    </VBox>
 </HBox>

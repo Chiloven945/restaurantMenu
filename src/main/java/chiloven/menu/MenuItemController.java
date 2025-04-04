@@ -17,6 +17,8 @@ public class MenuItemController {
     public Spinner<Integer> quantitySpinner;
     @FXML
     public ImageView itemImage;
+    @FXML
+    public Label remainingLabel;
 
     public void setItemData(String name, String description, String price, Image image) {
         itemName.setText(name);

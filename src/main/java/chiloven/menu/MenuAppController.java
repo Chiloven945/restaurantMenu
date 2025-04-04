@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.Node;
 import javafx.stage.FileChooser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,6 +16,8 @@ import org.apache.logging.log4j.Logger;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MenuAppController {
 
@@ -24,6 +27,7 @@ public class MenuAppController {
     private final List<FoodCategory> loadedCategories = new ArrayList<>();
     private final Map<String, Integer> categoryLimits = new HashMap<>();
     private final Map<String, List<String>> categoryItems = new HashMap<>();
+    private final Map<String, Label> categoryRemainingLabels = new HashMap<>();
     @FXML
     private VBox menuContainer;
     @FXML
@@ -104,7 +108,8 @@ public class MenuAppController {
             String category = categoryData.category;
             List<MenuItemData> items = categoryData.items;
 
-            int limit = category.replaceAll("[^0-9]", "").isEmpty() ? 99 : Integer.parseInt(category.replaceAll("[^0-9]", ""));
+            int limit = categoryData.limit != null ? categoryData.limit : 8;
+
             categoryLimits.put(category, limit);
             categoryItems.put(category, new ArrayList<>());
 
@@ -114,6 +119,11 @@ public class MenuAppController {
                 CategoryTitleController titleController = titleLoader.getController();
                 titleController.setTitle(category);
                 menuContainer.getChildren().add(titleBox);
+
+                Label remainingLabel = new Label();
+                remainingLabel.setStyle("-fx-text-fill: #999999; -fx-font-size: 12px;");
+                categoryRemainingLabels.put(category, remainingLabel);
+                menuContainer.getChildren().add(remainingLabel);
             } catch (Exception e) {
                 logger.error("Failed to load category title FXML", e);
             }
@@ -137,6 +147,9 @@ public class MenuAppController {
                     Spinner<Integer> spinner = new Spinner<>(0, limit, 0);
                     spinner.setEditable(true);
                     controller.quantitySpinner.setValueFactory(spinner.getValueFactory());
+
+                    controller.quantitySpinner.valueProperty().addListener((obs, oldVal, newVal) -> updateCategoryLimits(category));
+                    controller.remainingLabel.setText("剩余可选：" + limit);
 
                     foodQuantityMap.put(item.name, controller.quantitySpinner);
                     categoryItems.get(category).add(item.name);
@@ -210,10 +223,24 @@ public class MenuAppController {
             total += foodQuantityMap.get(item).getValue();
         }
         int remaining = categoryLimits.get(category) - total;
+
+        Label remainingLabel = categoryRemainingLabels.get(category);
+        if (remainingLabel != null) {
+            remainingLabel.setText("Remaining: " + remaining);
+        }
         for (String item : categoryItems.get(category)) {
             Spinner<Integer> spinner = foodQuantityMap.get(item);
             int current = spinner.getValue();
-            spinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, current + remaining, current));
+            spinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Math.max(current + remaining, current), current));
+
+            Node parent = spinner.getParent();
+            if (parent instanceof VBox vbox) {
+                for (Node child : vbox.getChildren()) {
+                    if (child instanceof Label label && "remainingLabel".equals(label.getId())) {
+                        label.setText("剩余可选：" + remaining);
+                    }
+                }
+            }
         }
     }
 
@@ -236,5 +263,6 @@ public class MenuAppController {
     public static class FoodCategory {
         public String category;
         public List<MenuItemData> items;
+        public Integer limit;
     }
 }

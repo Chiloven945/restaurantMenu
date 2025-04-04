@@ -1,6 +1,7 @@
 [
   {
     "category": "Pre-Meal Bread",
+    "limit": 8,
     "items": [
       {
         "name": "Garlic Baguette",
@@ -17,7 +18,8 @@
     ]
   },
   {
-    "category": "Steak (Choose 8 out of 9)",
+    "category": "Steak",
+    "limit": 8,
     "items": [
       {
         "name": "Pan-Seared Filet Mignon",
@@ -77,6 +79,7 @@
   },
   {
     "category": "Pasta (Choose 2 out of 4)",
+    "limit": 2,
     "items": [
       {
         "name": "Creamy Mushroom Bacon Pasta",
@@ -106,6 +109,7 @@
   },
   {
     "category": "Pizza (Choose 2 out of 5)",
+    "limit": 2,
     "items": [
       {
         "name": "Italian Margherita Pizza",
@@ -141,6 +145,7 @@
   },
   {
     "category": "Salad (Choose 2 out of 3)",
+    "limit": 2,
     "items": [
       {
         "name": "Caesar Salad",
@@ -164,6 +169,7 @@
   },
   {
     "category": "Appetizers (Choose 3 out of 5)",
+    "limit": 3,
     "items": [
       {
         "name": "Crispy Fried Calamari Rings",
@@ -199,6 +205,7 @@
   },
   {
     "category": "Soup (Choose 2 out of 3)",
+    "limit": 2,
     "items": [
       {
         "name": "Creamy Mushroom Soup",
@@ -222,9 +229,10 @@
   },
   {
     "category": "Dessert",
+    "limit": 8,
     "items": [
       {
-        "name": "Tiramisu (8 servings)",
+        "name": "Tiramisu",
         "description": "Classic Italian layered dessert.",
         "price": "$32",
         "image": "images/tiramisu.png"
